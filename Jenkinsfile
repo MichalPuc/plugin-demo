@@ -9,8 +9,8 @@ pipeline {
                 . plugin-demo/bin/activate
                 pip install wheel
                 pip install -r requirements.txt
-                export TCMS_PRODUCT_VERSION=$JOB_NAME
-                nosetests3 2> output.tap
+                set TCMS_PRODUCT_VERSION=$JOB_NAME
+                nosetests 2> output.tap
                 tcms-tap-plugin output.tap
 
                 nosetests3 --with-xunit
