@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/MichalPuc/plugin-demo.git'
-                sh '''
+                bat '''
                 python -m venv plugin-demo
                 . plugin-demo/bin/activate
                 pip install wheel
