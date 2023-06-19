@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/kiwitcms/plugin-demo.git'
+                git 'https://github.com/MichalPuc/plugin-demo.git'
                 sh '''
                 python3 -m venv plugin-demo
                 . plugin-demo/bin/activate
